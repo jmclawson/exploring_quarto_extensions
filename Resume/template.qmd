@@ -1,18 +1,84 @@
 ---
-title: Untitled
+top_spacing: 0.5em
+margin_top: 0cm
+margin_bottom: 0cm
+margin_left: 0.5cm
+margin_right: 0cm
+rect_strip_width: none
+column1_space: 70%
+column2_space: 82%
+font: none,
+fontsize: 10pt
+line_under_header: 95%
+year_spacing: 20%
+content_spacing: 80%
+phd_md_edd: true
+phd_start: 09/17
+phd_end: 09/21
+phd_degree: Ph.D. Prevention Science
+specialization: none
+phd_school: University of Oregon
+ma_ms: true
+master_start: 09/17
+master_end: 12/20
+master_degree: M.S. Prevention Science
+master_school: University of Oregon
+second_master: true
+master2_start: 08/15
+master2_end: 08/17
+master2_degree: M.A. Health Psychology
+master2_school: California State University, Dominguez Hills
+ba_bs: true
+bach_start: 09/09
+bach_end: 12/14
+bach_degree: B.A. Psychology
+minor: none
+bach_school: California State Polytechnic University, Pomona
+aa: false
+aa_start: none
+aa_end: none
+aa_degree: none
+aa_school: none
+job1_start: none
+job1_end: none
+job1_company: none
+job1_title: none
+job1_desc: ""
+job2_start: none
+job2_end: none
+job2_company: none
+job2_title: none
+job2_desc: ""
+job3_start: none
+job3_end: none
+job3_company: none
+job3_title: none
+job3_desc: ""
+job4_start: none
+job4_end: none
+job4_company: none
+job4_title: none
+job4_desc: ""
+column_color: e5f7ee
+photo: false
+headshot: Resume\resume_image.jpg
+headshot_height: 25%
+headshot_border: 200pt
+author_fontsize: 15pt
+author: Jonathan A. Pedroza, PhD
+author_email: mailto:jonpedroza1228@gmail.com
+author_github: none
+author_website: https://log-of-jandp.com/
+author_linkedin: https://www.linkedin.com/in/jonathan-a-pedroza-phd-5721a7120/
+author_phone: XXX-XXX-XXXX
+skills: ""
+category1: Languages
+cat1_bullets: ""
+category2: Certifications
+cat2_bullets: ""
 format:
   Resume-typst: default
 ---
 
-## Introduction
-
-*TODO* Create an example file that demonstrates the formatting and features of your format.
-
-## More Information
-
-You can learn more about creating custom Typst templates here: 
-
-<https://quarto.org/docs/prerelease/1.4/typst.html#custom-formats>
-
-
+Text
 
