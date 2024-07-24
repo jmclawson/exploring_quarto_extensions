@@ -2,7 +2,10 @@
   date: none,
   company: none,
   sent_to: none,
-  address: none,
+  job_address: none,
+  job_city: none,
+  job_state: none,
+  job_zipcode: none,
   job_title: none,
   name: none,
   home_address: none,
@@ -10,25 +13,24 @@
   state: none,
   zipcode: none,
   phone: none,
-  email: none,
-  github: none,
-  website: none,
-  margin_top: 1.5cm,
-  margin_bottom: 2cm,
-  margin_x: 1cm,
+  email: "none",
+  github: "none",
+  site: "https://log-of-jandp.com/",
   paper: "us-letter",
   lang: "en",
   region: "US",
   font: "Crimson Pro",
   fontsize: 11pt,
+  salutation: none,
   body
 ) = {
+
   set page(
     paper: paper,
     margin: (
-      top: margin_top,
-      bottom: margin_bottom,
-      x: margin_x
+      top: 1cm,
+      bottom: 2cm,
+      x: 1cm
     ),
     footer: [
     #set align(center)
@@ -37,9 +39,10 @@
       length: 100%,
       stroke: black
     )
-    *Address*: home_address, city, state zipcode | *Phone*: phone
-
-    *Email*: email | #if github != none {#link(github)[GitHub]} | #if website != none {#link(website)[Website]}
+    *Address*: home_address, city, state zipcode | *Phone*: phone | 
+    
+    //not sure why the Website link is not working unless I put a website in the template
+    *Email*: email | #if site != none {link(site)[Website]} | #if github != none {link(github)[GitHub]}
     ]
   )
 
@@ -51,19 +54,47 @@
 
   show link: underline
 
-  set block(spacing: 0.5em)
+  set block(spacing: 1em)
 
-  date
+    date
 
-  company
-  job_title
-  address
+    block(below: .4em)
 
-  linebreak()
+    company
 
-  sent_to
+    linebreak()
 
-  linebreak()
+    job_title
 
-  body
+    linebreak()
+
+    job_address 
+
+    linebreak()
+
+    job_city 
+    
+    job_state 
+    
+    job_zipcode
+
+    linebreak()
+    
+    block(below: .4em)
+    
+    sent_to
+
+    linebreak()
+
+    block(below: .4em)
+
+    body
+
+    linebreak()
+
+    salutation
+
+    linebreak()
+    
+    name
 }

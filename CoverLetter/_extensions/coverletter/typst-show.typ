@@ -8,8 +8,17 @@ $endif$
 $if(sent_to)$
   sent_to: [$sent_to$],
 $endif$
-$if(address)$
-  address: [$address$],
+$if(job_address)$
+  job_address: [$job_address$],
+$endif$
+$if(job_city)$
+  job_city: [$job_city$],
+$endif$
+$if(job_state)$
+  job_state: [$job_state$],
+$endif$
+$if(job_zipcode)$
+  job_zipcode: [$job_zipcode$],
 $endif$
 $if(job_title)$
   job_title: [$job_title$],
@@ -33,22 +42,13 @@ $if(phone)$
   phone: [$phone$],
 $endif$
 $if(email)$
-  email: $email$,
+  email: "$email$",
 $endif$
 $if(github)$
   github: "$github$",
 $endif$
-$if(website)$
-  website: "$website$",
-$endif$
-$if(margin_top)$
-  margin_top: [$margin_top$],
-$endif$
-$if(margin_bottom)$
-  margin_bottom: [$margin_bottom$],
-$endif$
-$if(margin_x)$
-  margin_x: [$margin_x$],
+$if(site)$
+  site: "$site$",
 $endif$
 $if(lang)$
   lang: "$lang$",
@@ -62,4 +62,8 @@ $endif$
 $if(fontsize)$
   fontsize: $fontsize$,
 $endif$
+$if(salutation)$
+  salutation: "$salutation$",
+$endif$
+  body,
 )
