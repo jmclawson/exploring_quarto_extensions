@@ -1,0 +1,30 @@
+---
+date: 07/23/2024
+company: none
+sent_to: none
+address: none
+job_title: none
+mission_statement: none
+name: Jonathan A. Pedroza, PhD
+skills: none
+home_address: none
+city: none
+state: none
+zipcode: none
+phone: none
+email: none
+github: none
+website: none
+margin_top: 1.5cm
+margin_bottom: 2cm
+margin_x: 1cm
+//paper: "us-letter"
+lang: "en"
+region: "US"
+font: "Crimson Pro"
+fontsize: 11pt
+format:
+  CoverLetter-typst: default
+---
+
+Text!
