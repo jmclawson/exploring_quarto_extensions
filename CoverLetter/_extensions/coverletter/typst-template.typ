@@ -16,15 +16,15 @@
   margin_top: 1.5cm,
   margin_bottom: 2cm,
   margin_x: 1cm,
-  //paper: "us-letter",
+  paper: "us-letter",
   lang: "en",
   region: "US",
   font: "Crimson Pro",
   fontsize: 11pt,
-  body,
+  body
 ) = {
   set page(
-    //paper: paper,
+    paper: paper,
     margin: (
       top: margin_top,
       bottom: margin_bottom,
@@ -39,7 +39,7 @@
     )
     *Address*: home_address, city, state zipcode | *Phone*: phone
 
-    *Email*: email | #if github != none {link(github)[GitHub]} | #if website != none {link(website)[Website]}
+    *Email*: email | #if github != none {#link(github)[GitHub]} | #if website != none {#link(website)[Website]}
     ]
   )
 

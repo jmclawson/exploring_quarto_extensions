@@ -1,24 +1,23 @@
----
+  ---
 date: 07/23/2024
-company: none
-sent_to: none
-address: none
-job_title: none
-mission_statement: none
+company: Company
+sent_to: Hiring Committee
+address: 100 Main St City, State 10000
+job_title: Data Scientist
 name: Jonathan A. Pedroza, PhD
-skills: none
-home_address: none
-city: none
-state: none
-zipcode: none
-phone: none
-email: none
-github: none
-website: none
+skills: skills, more skills, and all the skills
+home_address: 100 Not Main St
+city: City
+state: State
+zipcode: 10000
+phone: XXX-XXX-XXXX
+email: "jonpedroza1228@gmail.com"
+github: "https://github.com/jpedroza1228"
+website: "https://log-of-jandp.com/"
 margin_top: 1.5cm
 margin_bottom: 2cm
 margin_x: 1cm
-//paper: "us-letter"
+paper: "us-letter"
 lang: "en"
 region: "US"
 font: "Crimson Pro"
@@ -27,4 +26,6 @@ format:
   CoverLetter-typst: default
 ---
 
-Text!
+```{=typst}
+lorem(500)
+```

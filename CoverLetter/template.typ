@@ -166,15 +166,15 @@
   margin_top: 1.5cm,
   margin_bottom: 2cm,
   margin_x: 1cm,
-  //paper: "us-letter",
+  paper: "us-letter",
   lang: "en",
   region: "US",
   font: "Crimson Pro",
   fontsize: 11pt,
-  body,
+  body
 ) = {
   set page(
-    //paper: paper,
+    paper: paper,
     margin: (
       top: margin_top,
       bottom: margin_bottom,
@@ -229,15 +229,13 @@
   state: [none],
   zipcode: [none],
   phone: [none],
-  email: [none],
+  email: "none",
   github: "none",
+  website: "none",
   margin_top: [1.5cm],
   margin_bottom: [2cm],
   margin_x: [1cm],
   lang: "en",
   region: "US",
-  fontsize: 11pt,
+  fontsize: 11pt
 )
-
-
-Text!

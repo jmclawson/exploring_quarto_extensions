@@ -33,7 +33,7 @@ $if(phone)$
   phone: [$phone$],
 $endif$
 $if(email)$
-  email: [$email$],
+  email: $email$,
 $endif$
 $if(github)$
   github: "$github$",
