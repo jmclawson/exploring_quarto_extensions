@@ -1,6 +1,6 @@
 # PDF Creation for Contractor Invoices (Invoice Format)
 
-A simplistic invoice for any company that you work as a contractor for. This format requires that you have at least Quarto version 1.4, you can download the latest version of Quarto here.
+A simplistic invoice for any company that you work as a contractor for. This format requires that you have at least Quarto version 1.4, you can download the latest version of Quarto [here](https://quarto.org/docs/download/).
 
 # Installing
 
