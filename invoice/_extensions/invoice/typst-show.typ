@@ -25,19 +25,20 @@
   $if(address)$
     address: [$address$],
   $endif$
-  $if(issue-date)$
-    issue-date: [$issue-date$],
+  $if(issue_date)$
+    issue_date: [$issue_date$],
   $endif$
-  $if(start-of-work)$
-    start-of-work: [$start-of-work$],
+  $if(start_of_work)$
+    start_of_work: [$start_of_work$],
   $endif$
-  $if(end-of-work)$
-    end-of-work: [$end-of-work$],
+  $if(end_of_work)$
+    end_of_work: [$end_of_work$],
   $endif$
   $if(summary)$
     summary: [$summary$],
   $endif$
   $if(amount)$
     amount: [$amount$],
-  doc,
+  $endif$
+  //doc,
 )
