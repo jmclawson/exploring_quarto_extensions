@@ -8,8 +8,8 @@ This extension is to create invoices whenever work as a contractor is completed.
 
 ## Resume Extension
 
-**The quarto extension for the resume template is still a work in progress.** If you are interested in the raw typst file. Please email me at jonpedroza1228@gmail.com.
+This extension is a resume that is modeled after my current resume. The extension primarily relies on typst code in the `template.qmd` file. This decision was made to allow for more flexibility when creating a resume. The resume could also be completely changed while the only concrete changes are the margin sizes.
 
 ## Cover Letter Extension
 
-**The quarto extension for the resume template is still a work in progress.** If you are interested in the raw typst file. Please email me at jonpedroza1228@gmail.com.
+This extension is a simple cover letter template that includes contact information in the footer of the page. If interested in increasing its use past what the extension currently is, please create a pull request.
