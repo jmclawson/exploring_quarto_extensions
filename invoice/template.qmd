@@ -1,13 +1,41 @@
 ---
-company: Example Company
-name: Jonathan Andrew Pedroza
-specific_name: Example
-address: My address
-issue_date: 01/14/2024
-start_of_work: 01/01/2024
-end_of_work: 01/14/2024
-summary: Academy mentor weeks 0
-amount: $606
+sender:
+  name: James Clawson
+  address1: 120 Duck Street
+  address2: Chicago, IL 60657
+  phone: 1-234-567-8910
+  email: me@example.com
+recipient:
+  phone: 844-448-1212
+mentored:
+  - company: Ponderous, LLC
+    course: Tidyverse Foundations
+    start: 2025-05-01
+    end: 2025-05-15
+    cost: 1750
+    invoice: 1
+    invoices: 6
+    unitprice: 291.66
+  - company: Number 2 Corp.
+    course: Programming in R
+    start: 2025-05-01
+    end: 2025-05-15
+    cost: 3500
+    invoice: 1
+    invoices: 12
+    unitprice: 543.21
+missed:
+  - company: Ponderous, LLC
+    course: Tidyverse Foundations
+    date: 2025-05-03
+  - company: Ponderous, LLC
+    course: Tidyverse Foundations
+    date: 2025-05-08
+covered:
+  - company: Tremulous Piccolo
+    course: Shiny in R
+    date: 2025-05-15
+totaldue: 583.32
 format:
-  invoice-typst: default
+  invoiced-typst: default
 ---
