@@ -16,15 +16,48 @@ To use this format, just complete the information in the YAML and everything els
 
 ```{tex}
 ---
-company = [Company] 
-name = [Jonathan Andrew Pedroza]
-cohort = [Example]
-address = [My Address]
-issue-date = [01/14/2024]
-start-of-work = [01/01/2024]
-end-of-work = [01/14/2024]
-summary = [Quick Memo]
-amount = [Money]
+sender:
+  name: P Sherman
+  address1: 42 Wallaby Way
+  address2: Sydney, Australia
+  phone: +61 2 1234-5678
+  email: me@example.com
+recipient:
+  name: DuckBilled R Us 
+  address1: 2424 Walla Way
+  address2: Quacksworth, IL 60656
+  phone: 844-448-1212
+mentored:
+  - company: Ponderous, LLC
+    course: Paddling Foundations
+    start: 2025-05-01
+    end: 2025-05-15
+    cost: 1750
+    invoice: 1
+    invoices: 6
+    unitprice: 291.66
+  - company: Number 2 Corp.
+    course: Advanced Gliding
+    start: 2025-05-01
+    end: 2025-05-15
+    cost: 3500
+    invoice: 1
+    invoices: 12
+    unitprice: 543.21
+missed:
+  - company: Ponderous, LLC
+    course: Paddling Foundations
+    date: 2025-05-03
+  - company: Ponderous, LLC
+    course: Paddling Foundations
+    date: 2025-05-08
+covered:
+  - company: Tremulous Piccolo
+    course: Seasonal Soaring
+    date: 2025-05-15
+totaldue: 583.32
+format:
+  invoiced-typst: default
 ---
 ```
 
