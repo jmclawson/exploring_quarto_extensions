@@ -37,5 +37,5 @@ covered:
     date: 2025-05-15
 totaldue: 583.32
 format:
-  invoiced-typst: default
+  invoice-typst: default
 ---
