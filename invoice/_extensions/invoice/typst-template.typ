@@ -1,56 +1,81 @@
-#let invoice(
-  company: none,
-  name: none,
-  specific_name: none,
-  address: none,
-  issue_date: none,
-  start_of_work: none,
-  end_of_work: none,
-  summary: none,
-  amount: none,
-  //doc
+#let invoiced(
+  sender_name: none,
+  sender_address1: none,
+  sender_address2: none,
+  sender_phone: none,
+  sender_email: none,
+  recipient_name: none,
+  recipient_address1: none,
+  recipient_address2: none,
+  recipient_phone: none,
+  mentored: none,
+  missed: none,
+  covered: none,
+  totaldue: none,
+  date: none,
 ) = {
-  set page(
-    margin: (
-      top: 1in,
-      bottom: 1in,
-      left: .5in,
-      right: .5in
-    )
-  )
-
-  set text(
-    font: "Source Sans Pro",
-    size: 12pt
-  )
-
-  align(center)[
-    #set text(
-      size: 16pt,
-      weight: "bold"
-    )
-    #company Invoice - #specific_name
-  ]
-
-  line(
-    length: 100%,
-    stroke: black
-  )
-
+  //Begin actual content
   grid(
-    columns: 1,
+    columns: (2fr, 0.5fr, 1fr),
+    text(30pt)[*INVOICE*],
+    [From:],
     [
-      *Name*: #name
-      #linebreak()
-      *Address*: #address
-      #linebreak()
-      *Issue Date*: #issue_date
-      #linebreak()
-      *Dates of Work*: #start_of_work - #end_of_work
-      #linebreak()
-      *Summary of Work Completed*: #summary
-      #linebreak()
-      *Amount*: #amount
+      #text(16pt)[*#sender_name*] \
+      #sender_address1 \
+      #sender_address2 \
+      #sender_phone \
+      #sender_email
+    ])
+  
+  linebreak()
+  
+  grid(
+    columns: (0.5fr, 1.5fr, 0.5fr, 1fr),
+    [Invoice For:],
+    [
+      #text(16pt)[*#recipient_name*] \
+      #recipient_address1 \
+      #recipient_address2 \
+      #recipient_phone
+    ],
+    [
+      Issue Date: \
+      Terms:
+    ],
+    [
+      #date \
+      Due upon receipt
     ]
   )
+  
+  linebreak()
+
+  table(
+    fill: (x, y) =>
+      if y == 0 {
+        gray.lighten(70%)
+      },
+    columns: (1fr, auto, auto, auto),
+    rows: 36pt,
+    inset: 5pt,
+    align: (left + horizon, center + horizon, right + horizon, right + horizon),
+    stroke: 0.5pt, 
+    [*Description*],
+    [*Quantity*],
+    [*Unit Price*],
+    [*Total*],
+    $for(mentored)$
+      [_mentored_ $it.course$ for *$it.company$* \ from $it.start$ to $it.end$ (invoice $it.invoice$ of $it.invoices$)],table.cell(align: center)[1],table.cell(align: right)[$it.unitprice$],table.cell(align: right)[$it.unitprice$],
+    $endfor$
+    $for(missed)$
+      [_missed_ $it.course$ for *$it.company$* \ on $it.date$],table.cell(align: center)[1],table.cell(align: right)[-121.00],table.cell(align: right)[-121.00],
+    $endfor$
+    $for(covered)$
+      [_covered_ $it.course$ for *$it.company$* \ on $it.date$],table.cell(align: center)[1],table.cell(align: right)[133.00],table.cell(align: right)[133.00],
+    $endfor$
+    [ ],[ ],[ ],[ ],
+    table.cell(colspan: 3, align: right, stroke: none)[*TOTAL AMOUNT DUE*],table.cell(stroke: 2pt)[*$totaldue$*],
+  )
+  
 }
+
