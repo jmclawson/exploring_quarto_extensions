@@ -1,44 +1,61 @@
-// Typst custom formats typically consist of a 'typst-template.typ' (which is
-// the source code for a typst template) and a 'typst-show.typ' which calls the
-// template's function (forwarding Pandoc metadata values as required)
-//
-// This is an example 'typst-show.typ' file (based on the default template  
-// that ships with Quarto). It calls the typst function named 'article' which 
-// is defined in the 'typst-template.typ' file. 
-//
-// If you are creating or packaging a custom typst template you will likely
-// want to replace this file and 'typst-template.typ' entirely. You can find
-// documentation on creating typst templates here and some examples here:
-//   - https://typst.app/docs/tutorial/making-a-template/
-//   - https://github.com/typst/templates
+#show: doc => {
 
-#show: doc => invoice(
-  $if(company)$
-    company: [$company$],
+invoiced(
+  $if(sender.name)$
+    sender_name: [$sender.name$],
   $endif$
-  $if(name)$
-    name: [$name$],
+  $if(sender.address1)$
+    sender_address1: [$sender.address1$],
   $endif$
-  $if(specific_name)$
-    specific_name: [$specific_name$],
+  $if(sender.address2)$
+    sender_address2: [$sender.address2$],
   $endif$
-  $if(address)$
-    address: [$address$],
+  $if(sender.phone)$
+    sender_phone: [$sender.phone$],
+  $else$
+    sender_phone: none,
   $endif$
-  $if(issue_date)$
-    issue_date: [$issue_date$],
+  $if(sender.email)$
+    sender_email: [$sender.email$],
+  $else$
+    sender_email: none,
   $endif$
-  $if(start_of_work)$
-    start_of_work: [$start_of_work$],
+  $if(recipient.name)$
+    recipient_name: [$recipient.name$],
+  $else$
+    recipient_name: [Posit PBC],
   $endif$
-  $if(end_of_work)$
-    end_of_work: [$end_of_work$],
+  $if(recipient.address1)$
+    recipient_address1: [$recipient.address1$],
+  $else$
+    recipient_address1: [250 Northern Ave],
   $endif$
-  $if(summary)$
-    summary: [$summary$],
+  $if(recipient.address2)$
+    recipient_address2: [$recipient.address2$],
+  $else$
+    recipient_address2: [Boston, MA 02210],
   $endif$
-  $if(amount)$
-    amount: [$amount$],
+  $if(recipient.phone)$
+    recipient_phone: [$recipient.phone$],
+  $else$
+    recipient_phone: none,
   $endif$
-  //doc,
+  $if(mentored)$
+    mentored: [$mentored$],
+  $endif$
+  $if(missed)$
+    missed: [$missed$],
+  $endif$
+  $if(covered)$
+    covered: [$covered$],
+  $endif$
+  $if(totaldue)$
+    totaldue: [$totaldue$],
+  $endif$
+  $if(date)$
+    date: [$date$]
+  $else$
+    date: [#datetime.today().display()]
+  $endif$
 )
+}
