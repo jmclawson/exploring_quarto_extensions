@@ -1,15 +1,18 @@
 ---
 sender:
-  name: James Clawson
-  address1: 120 Duck Street
-  address2: Chicago, IL 60657
-  phone: 1-234-567-8910
+  name: P Sherman
+  address1: 42 Wallaby Way
+  address2: Sydney, Australia
+  phone: +61 2 1234-5678
   email: me@example.com
 recipient:
+  name: DuckBilled R Us 
+  address1: 2424 Walla Way
+  address2: Quacksworth, IL 60656
   phone: 844-448-1212
 mentored:
   - company: Ponderous, LLC
-    course: Tidyverse Foundations
+    course: Paddling Foundations
     start: 2025-05-01
     end: 2025-05-15
     cost: 1750
@@ -17,7 +20,7 @@ mentored:
     invoices: 6
     unitprice: 291.66
   - company: Number 2 Corp.
-    course: Programming in R
+    course: Advanced Gliding
     start: 2025-05-01
     end: 2025-05-15
     cost: 3500
@@ -26,16 +29,16 @@ mentored:
     unitprice: 543.21
 missed:
   - company: Ponderous, LLC
-    course: Tidyverse Foundations
+    course: Paddling Foundations
     date: 2025-05-03
   - company: Ponderous, LLC
-    course: Tidyverse Foundations
+    course: Paddling Foundations
     date: 2025-05-08
 covered:
   - company: Tremulous Piccolo
-    course: Shiny in R
+    course: Seasonal Soaring
     date: 2025-05-15
 totaldue: 583.32
 format:
-  invoice-typst: default
+  invoiced-typst: default
 ---
